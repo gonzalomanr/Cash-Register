@@ -1,6 +1,6 @@
 ﻿namespace Cash_Register
 {
-    partial class Form1
+    partial class theKebab
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(theKebab));
             this.titleColorLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
             this.kebabLabel = new System.Windows.Forms.Label();
@@ -48,6 +49,10 @@
             this.tenderedLabel = new System.Windows.Forms.Label();
             this.tenderedTextBox = new System.Windows.Forms.TextBox();
             this.printButton = new System.Windows.Forms.Button();
+            this.changeButton = new System.Windows.Forms.Button();
+            this.changeLabel1 = new System.Windows.Forms.Label();
+            this.changeLabel2 = new System.Windows.Forms.Label();
+            this.newOrderButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titleColorLabel
@@ -63,8 +68,8 @@
             // 
             this.titleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.titleLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.titleLabel.Font = new System.Drawing.Font("Palatino Linotype", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(104, 9);
+            this.titleLabel.Font = new System.Drawing.Font("Palatino Linotype", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Location = new System.Drawing.Point(126, 9);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(167, 63);
             this.titleLabel.TabIndex = 1;
@@ -167,10 +172,10 @@
             // 
             this.myName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.myName.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.myName.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myName.Location = new System.Drawing.Point(77, 40);
+            this.myName.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.myName.Location = new System.Drawing.Point(108, 23);
             this.myName.Name = "myName";
-            this.myName.Size = new System.Drawing.Size(40, 21);
+            this.myName.Size = new System.Drawing.Size(35, 28);
             this.myName.TabIndex = 13;
             this.myName.Text = "The";
             // 
@@ -186,7 +191,7 @@
             // calculateButton
             // 
             this.calculateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.calculateButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.calculateButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.calculateButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.calculateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calculateButton.Location = new System.Drawing.Point(104, 208);
@@ -217,27 +222,76 @@
             // 
             // tenderedTextBox
             // 
-            this.tenderedTextBox.Location = new System.Drawing.Point(132, 373);
+            this.tenderedTextBox.Location = new System.Drawing.Point(137, 373);
             this.tenderedTextBox.Name = "tenderedTextBox";
             this.tenderedTextBox.Size = new System.Drawing.Size(100, 20);
-            this.tenderedTextBox.TabIndex = 18;
+            this.tenderedTextBox.TabIndex = 16;
             // 
             // printButton
             // 
-            this.printButton.Location = new System.Drawing.Point(82, 413);
+            this.printButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.printButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.printButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.printButton.Location = new System.Drawing.Point(82, 471);
             this.printButton.Name = "printButton";
             this.printButton.Size = new System.Drawing.Size(206, 23);
-            this.printButton.TabIndex = 19;
+            this.printButton.TabIndex = 18;
             this.printButton.Text = "Print Receipt";
-            this.printButton.UseVisualStyleBackColor = true;
+            this.printButton.UseVisualStyleBackColor = false;
             this.printButton.Click += new System.EventHandler(this.printButton_Click);
             // 
-            // Form1
+            // changeButton
+            // 
+            this.changeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.changeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeButton.Location = new System.Drawing.Point(82, 399);
+            this.changeButton.Name = "changeButton";
+            this.changeButton.Size = new System.Drawing.Size(206, 23);
+            this.changeButton.TabIndex = 17;
+            this.changeButton.Text = "Calculate Change";
+            this.changeButton.UseVisualStyleBackColor = false;
+            this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
+            // 
+            // changeLabel1
+            // 
+            this.changeLabel1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeLabel1.Location = new System.Drawing.Point(54, 429);
+            this.changeLabel1.Name = "changeLabel1";
+            this.changeLabel1.Size = new System.Drawing.Size(102, 39);
+            this.changeLabel1.TabIndex = 21;
+            this.changeLabel1.Text = "Change:";
+            // 
+            // changeLabel2
+            // 
+            this.changeLabel2.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeLabel2.Location = new System.Drawing.Point(132, 429);
+            this.changeLabel2.Name = "changeLabel2";
+            this.changeLabel2.Size = new System.Drawing.Size(95, 39);
+            this.changeLabel2.TabIndex = 22;
+            // 
+            // newOrderButton
+            // 
+            this.newOrderButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.newOrderButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.newOrderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newOrderButton.Location = new System.Drawing.Point(515, 471);
+            this.newOrderButton.Name = "newOrderButton";
+            this.newOrderButton.Size = new System.Drawing.Size(142, 26);
+            this.newOrderButton.TabIndex = 19;
+            this.newOrderButton.Text = "New Order";
+            this.newOrderButton.UseVisualStyleBackColor = false;
+            this.newOrderButton.Click += new System.EventHandler(this.newOrderButton_Click);
+            // 
+            // theKebab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(740, 448);
+            this.ClientSize = new System.Drawing.Size(740, 506);
+            this.Controls.Add(this.newOrderButton);
+            this.Controls.Add(this.changeLabel2);
+            this.Controls.Add(this.changeLabel1);
+            this.Controls.Add(this.changeButton);
             this.Controls.Add(this.printButton);
             this.Controls.Add(this.tenderedTextBox);
             this.Controls.Add(this.tenderedLabel);
@@ -258,8 +312,9 @@
             this.Controls.Add(this.kebabLabel);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.titleColorLabel);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "theKebab";
+            this.Text = "The Kebab";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,6 +342,10 @@
         private System.Windows.Forms.Label tenderedLabel;
         private System.Windows.Forms.TextBox tenderedTextBox;
         private System.Windows.Forms.Button printButton;
+        private System.Windows.Forms.Button changeButton;
+        private System.Windows.Forms.Label changeLabel1;
+        private System.Windows.Forms.Label changeLabel2;
+        private System.Windows.Forms.Button newOrderButton;
     }
 }
 
